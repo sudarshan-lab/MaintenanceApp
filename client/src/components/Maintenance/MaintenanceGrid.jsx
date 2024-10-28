@@ -52,7 +52,7 @@ const MaintenanceGrid = ({ data, onDelete, onUpdate }) => {
                 <Td textAlign="center" width="12.5%">{request.room}</Td>
                 <Td textAlign="center" width="12.5%">{request.priority}</Td>
                 <Td textAlign="center" width="12.5%">{request.description}</Td>
-                <Td textAlign="center" width="12.5%">{new Date(request.date).toLocaleDateString()}</Td> {/* Formatting date */}
+                <Td textAlign="center" width="12.5%">{new Date(request.date).toISOString().split('T')[0]}</Td> {/* Formatting date */}
                 <Td textAlign="center" width="25%">
                   <Button onClick={() => onUpdate(request)} colorScheme="teal" mr={2}>Update</Button>
                   <Button onClick={() => onDelete(request.reqId)} colorScheme="red">Delete</Button>
