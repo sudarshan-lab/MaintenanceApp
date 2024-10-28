@@ -89,19 +89,19 @@ import {
         <ModalCloseButton />
         <ModalBody>
           <FormControl>
-            <FormLabel>Room</FormLabel>
+            <FormLabel>Room#</FormLabel>
             <Input name="room" value={formData?.room} onChange={handleChange} />
           </FormControl>
           <FormControl mt={4}>
-            <FormLabel>By</FormLabel>
+            <FormLabel>Requested by</FormLabel>
             <Input name="by" value={formData?.by} onChange={handleChange} />
           </FormControl>
           <FormControl mt={4}>
-            <FormLabel>Description</FormLabel>
+            <FormLabel>Description of work/repair</FormLabel>
             <Input name="description" value={formData?.description} onChange={handleChange} />
           </FormControl>
           <FormControl mt={4}>
-            <FormLabel>Priority</FormLabel>
+            <FormLabel>Requested priority</FormLabel>
             <Select name="priority" value={formData?.priority} onChange={handleChange}>
               <option value="Low">Low</option>
               <option value="Medium">Medium</option>
@@ -109,7 +109,7 @@ import {
             </Select>
           </FormControl>
           <FormControl mt={4}>
-            <FormLabel>Date</FormLabel>
+            <FormLabel>Requested date of work/repair</FormLabel>
             <Input
               type="date" 
               name="date"
