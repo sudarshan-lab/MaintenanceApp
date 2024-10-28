@@ -32,11 +32,12 @@ const MaintenanceGrid = ({ data, onDelete, onUpdate }) => {
       <Table variant="simple">
         <Thead>
           <Tr>
-            <Th textAlign="center" cursor={'pointer'} width="15%" onClick={() => handleSort('reqId')}>Request ID</Th>
-            <Th textAlign="center" cursor={'pointer'} width="15%" onClick={() => handleSort('room')}>Room</Th>
-            <Th textAlign="center" cursor={'pointer'} width="15%" onClick={() => handleSort('priority')}>Priority</Th>
-            <Th textAlign="center" cursor={'pointer'} width="15%" onClick={() => handleSort('description')}>Description</Th>
-            <Th textAlign="center" cursor={'pointer'} width="15%" onClick={() => handleSort('date')}>Date</Th>
+            <Th textAlign="center" cursor={'pointer'} width="12.5%" onClick={() => handleSort('reqId')}>Request ID</Th>
+            <Th textAlign="center" cursor={'pointer'} width="12.5%" onClick={() => handleSort('by')}>By</Th>
+            <Th textAlign="center" cursor={'pointer'} width="12.5%" onClick={() => handleSort('room')}>Room</Th>
+            <Th textAlign="center" cursor={'pointer'} width="12.5%" onClick={() => handleSort('priority')}>Priority</Th>
+            <Th textAlign="center" cursor={'pointer'} width="12.5%" onClick={() => handleSort('description')}>Description</Th>
+            <Th textAlign="center" cursor={'pointer'} width="12.5%" onClick={() => handleSort('date')}>Date</Th>
             <Th textAlign="center" width="25%">Actions</Th>
           </Tr>
         </Thead>
@@ -46,11 +47,12 @@ const MaintenanceGrid = ({ data, onDelete, onUpdate }) => {
           <Tbody>
             {sortedData.map((request) => (
               <Tr key={request.reqId}>
-                <Td textAlign="center" width="15%">{request.reqId}</Td>
-                <Td textAlign="center" width="15%">{request.room}</Td>
-                <Td textAlign="center" width="15%">{request.priority}</Td>
-                <Td textAlign="center" width="15%">{request.description}</Td>
-                <Td textAlign="center" width="15%">{new Date(request.date).toLocaleDateString()}</Td> {/* Formatting date */}
+                <Td textAlign="center" width="12.5%">{request.reqId}</Td>
+                <Td textAlign="center" width="12.5%">{request.by}</Td>
+                <Td textAlign="center" width="12.5%">{request.room}</Td>
+                <Td textAlign="center" width="12.5%">{request.priority}</Td>
+                <Td textAlign="center" width="12.5%">{request.description}</Td>
+                <Td textAlign="center" width="12.5%">{new Date(request.date).toLocaleDateString()}</Td> {/* Formatting date */}
                 <Td textAlign="center" width="25%">
                   <Button onClick={() => onUpdate(request)} colorScheme="teal" mr={2}>Update</Button>
                   <Button onClick={() => onDelete(request.reqId)} colorScheme="red">Delete</Button>
